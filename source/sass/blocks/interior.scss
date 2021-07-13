@@ -1,0 +1,93 @@
+.interior-style {
+  padding: 20px;
+  display: grid;
+  grid-template-rows: auto;
+}
+
+.interior-style__pagination-list,
+.interior-style__image-list {
+  list-style: none;
+  margin: 0;
+  padding-left: 0;
+}
+
+.interior-style__pagination-list {
+  width: 140px;
+  margin: 20px auto;
+  display: flex;
+  justify-content: space-between;
+  grid-row: 2 / 3;
+}
+
+.interior-style__pagination-button {
+  width: 10px;
+  height: 10px;
+  display: block;
+  border: none;
+  background: url("../img/stack.svg#pin") 50% 50% no-repeat;
+  background-size: 10px 10px;
+
+  &--active {
+    background: url("../img/stack.svg#pin-active") 50% 50% no-repeat;
+  }
+}
+
+.interior-style__image-item {
+  display: none;
+
+  &--active {
+    display: block;
+    text-align: center;
+  }
+}
+
+.interior-style__title {
+  margin: 0;
+  text-align: right;
+  font-weight: normal;
+  font-size: 30px;
+  line-height: 40px;
+  font-family: $font-playfair-display;
+}
+
+.interior-style__title-bolt {
+  font-weight: bold;
+}
+
+.interior-style__text {
+  margin: 20px 0;
+  text-align: right;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 150%;
+  font-family: $font-gothampro;
+}
+
+.interior-style__button-block {
+  padding: 0 30px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.interior-style__button {
+  width: 120px;
+  height: 120px;
+  display: block;
+  box-sizing: 120px 120px;
+
+  &--design {
+    background: url('../img/design.png') 50% 50% no-repeat;
+  }
+
+  &--shop {
+    background: url('../img/shop.png') 50% 50% no-repeat;
+  }
+
+  &--design-active {
+    background: url('../img/design-active.png') 50% 50% no-repeat;
+  }
+
+  &--shop-active {
+    background: url('../img/shop-active.png') 50% 50% no-repeat;
+  }
+}

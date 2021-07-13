@@ -1,0 +1,43 @@
+.header {
+  padding: 0 20px;
+  background: var(--white);
+}
+
+.header__wrapper {
+  padding: 20px 0;
+  display: grid;
+  grid-template-columns: 20px 1fr min-content 1fr 20px;
+  border-bottom: $border-black;
+}
+
+.header__link-menu {
+  width: 20px;
+  height: 20px;
+  display: inline-block;
+  grid-column: 1 / 2;
+}
+
+.header__link-logo {
+  width: 115px;
+  display: inline-block;
+  align-items: center;
+  grid-column: 3 / 4;
+}
+
+.header__search {
+  width: 20px;
+  height: 20px;
+  grid-column: 5 / -1;
+}
+
+.header__icon-lens {
+  width: 20px;
+  height: 20px;
+  display: block;
+  background: url('../img/stack.svg#lens') 50% 50% no-repeat;
+  background-size: 20px 20px;
+}
+
+.header__search-text {
+  display: none;
+}

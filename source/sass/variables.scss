@@ -1,2 +1,16 @@
+$tablet-width: 768px;
+$desktop-width: 1920px;
+
 $font-open-sans: 'Open Sans', 'Arial', sans-serif;
 $font-playfair-display: 'Playfair Display', 'Georgia', serif;
+$font-gothampro: 'GothamPro', 'Arial', sans-serif;
+
+:root{
+  --white: #ffffff;
+  --black: #000000;
+  --black-ligth: #111111;
+  --gray: #3f3f3f;
+  --gray-ligth: #f5f5f5;
+}
+
+$border-black: 1px solid var(--black);

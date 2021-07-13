@@ -9,7 +9,6 @@ const rename = require("gulp-rename");
 const htmlmin = require("gulp-htmlmin");
 const terser = require("gulp-terser");
 const imagemin = require("gulp-imagemin");
-const webp = require("gulp-webp");
 const svgsprite = require("gulp-svg-sprite");
 const del = require("del");
 const sync = require("browser-sync").create();
@@ -64,27 +63,6 @@ const images = () => {
 }
 exports.images = images;
 
-const createWebp = () => {
-  return src("source/img/*.{jpg,png}")
-    .pipe(webp({
-      quality: 90
-    }))
-    .pipe(dest("build/img"))
-}
-exports.createWebp = createWebp;
-
-const logo = () => {
-  return src("source/img/logo/*.svg")
-    .pipe(svgsprite({
-      mode: {
-        stack: {}
-      }
-    }))
-    .pipe(rename("logo.svg"))
-    .pipe(dest("build/img"))
-}
-exports.logo = logo;
-
 const svgstack = () => {
   return src("source/img/icons/**/*.svg")
     .pipe(svgsprite({
@@ -100,10 +78,7 @@ exports.svgstack = svgstack;
 const copy = (done) => {
   src([
     "source/fonts/*.{woff2,woff}",
-    "source/*.ico",
-    "source/img/favicon/favicon.svg",
-    "source/img/**/*.{jpg,png}",
-    "source/*.webmanifest"
+    "source/img/**/*.{jpg,png}"
   ], {
     base: "source"
   })
@@ -147,10 +122,8 @@ const build = series(
     styles,
     html,
     scripts,
-    logo,
     svgstack,
-    images,
-    createWebp
+    images
   )
 );
 
@@ -163,9 +136,7 @@ exports.default = series(
     styles,
     html,
     scripts,
-    logo,
-    svgstack,
-    createWebp
+    svgstack
   ),
   series(
     server,

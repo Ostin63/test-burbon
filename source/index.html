@@ -8,121 +8,148 @@
   <title>Test-Burbon</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https: //fonts.googleapis.com/css2? family = Open + Sans & family = Playfair + Display: wght @ 400; 700 & display = swap "
-    rel=" stylesheet ">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Playfair+Display:wght@400;700&display=swap"
+    rel="stylesheet">
   <link rel="stylesheet" href="css/style.min.css">
 </head>
 
 <body>
   <header class="header">
-    <a class="header__link-menu">
-      <img class="header__menu" src="img/menu.svg" alt="menu">
-    </a>
-    <a class="header__link-logo">
-      <img class="header__logo" src="img/top-logo.png" alt="logo">
-    </a>
-    <form class="header__search" action="#">
-      <label for="search">
-        <span class="visually-hidden">Поиск по сайту</span>
-        <span class="header__icon-lens"></span>
-      </label>
-      <input class="header__search-text" type="text" id="search" required>
-    </form>
+    <div class="header__wrapper">
+      <a class="header__link-menu">
+        <svg class="header__link-menu" role="img" width="40" height="20">
+          <use xlink:href="img/stack.svg#menu"></use>
+        </svg>
+      </a>
+      <a class="header__link-logo">
+        <picture>
+          <source media="(min-width: $desktop-width)" srcset="img/top-logo-max.png">
+        </picture>
+        <img class="header__logo" src="img/top-logo.png" alt="logo" width="115" height="10">
+      </a>
+      <form class="header__search" action="#">
+        <label for="search">
+          <span class="visually-hidden">Поиск по сайту</span>
+          <span class="header__icon-lens"></span>
+        </label>
+        <input class="header__search-text" type="text" id="search" required>
+      </form>
+    </div>
   </header>
   <main>
     <h1 class="visually-hidden">Мио Керамика</h1>
     <section class="interior-style">
       <ol class="interior-style__pagination-list">
-        <li class="interion-style__pagination-item">
-          <button class="interion-style__pagination-button"></button>
+        <li class="interior-style__pagination-item">
+          <button class="interior-style__pagination-button interior-style__pagination-button--active"></button>
         </li>
-        <li class="interion-style__pagination-item">
-          <button class="interion-style__pagination-button"></button>
+        <li class="interior-style__pagination-item">
+          <button class="interior-style__pagination-button"></button>
         </li>
-        <li class="interion-style__pagination-item">
-          <button class="interion-style__pagination-button"></button>
+        <li class="interior-style__pagination-item">
+          <button class="interior-style__pagination-button"></button>
         </li>
-        <li class="interion-style__pagination-item">
-          <button class="interion-style__pagination-button"></button>
+        <li class="interior-style__pagination-item">
+          <button class="interior-style__pagination-button"></button>
         </li>
-        <li class="interion-style__pagination-item">
-          <button class="interion-style__pagination-button"></button>
+        <li class="interior-style__pagination-item">
+          <button class="interior-style__pagination-button"></button>
         </li>
-        <li class="interion-style__pagination-item">
-          <button class="interion-style__pagination-button"></button>
+        <li class="interior-style__pagination-item">
+          <button class="interior-style__pagination-button"></button>
         </li>
       </ol>
-      <ul class="interion-style__image-list">
-        <li class="interion-style__image-item">
-          <div class="interion-style__block-image">
-            <img src="" alt="">
-          </div>
+      <ul class="interior-style__image-list">
+        <li class="interior-style__image-item interior-style__image-item--active">
+          <picture>
+            <source media="(min-width: $desktop-width)" srcset="img/slider-1920-1.jpg">
+            <source media="(min-width: $tablet-width)" srcset="img/slider-768-1.jpg">
+            <img class="interior-style__image" src="img/slider-320-1.jpg" alt="">
+          </picture>
         </li>
-        <li class="interion-style__image-item">
-          <div class="interion-style__block-image">
-            <img src="" alt="">
-          </div>
+        <li class="interior-style__image-item">
+          <picture>
+            <source media="(min-width: $desktop-width)" srcset="img/slider-1920-2.jpg">
+            <source media="(min-width: $tablet-width)" srcset="img/slider-768-2.jpg">
+            <img class="interior-style__image" src="img/slider-320-2.jpg" alt="">
+          </picture>
         </li>
-        <li class="interion-style__image-item">
-          <div class="interion-style__block-image">
-            <img src="" alt="">
-          </div>
+        <li class="interior-style__image-item">
+          <picture>
+            <source media="(min-width: $desktop-width)" srcset="img/slider-1920-3.jpg">
+            <source media="(min-width: $tablet-width)" srcset="img/slider-768-3.jpg">
+            <img class="interior-style__image" src="img/slider-320-3.jpg" alt="">
+          </picture>
         </li>
-        <li class="interion-style__image-item">
-          <div class="interion-style__block-image">
-            <img src="" alt="">
-          </div>
+        <li class="interior-style__image-item">
+          <picture>
+            <source media="(min-width: $desktop-width)" srcset="img/slider-1920-4.jpg">
+            <source media="(min-width: $tablet-width)" srcset="img/slider-768-4.jpg">
+            <img class="interior-style__image" src="img/slider-320-4.jpg" alt="">
+          </picture>
         </li>
-        <li class="interion-style__image-item">
-          <div class="interion-style__block-image">
-            <img src="" alt="">
-          </div>
+        <li class="interior-style__image-item">
+          <picture>
+            <source media="(min-width: $desktop-width)" srcset="img/slider-1920-5.jpg">
+            <source media="(min-width: $tablet-width)" srcset="img/slider-768-5.jpg">
+            <img class="interior-style__image" src="img/slider-320-5.jpg" alt="">
+          </picture>
         </li>
-        <li class="interion-style__image-item">
-          <div class="interion-style__block-image">
-            <img src="" alt="">
-          </div>
+        <li class="interior-style__image-item">
+          <picture>
+            <source media="(min-width: $desktop-width)" srcset="img/slider-1920-6.jpg">
+            <source media="(min-width: $tablet-width)" srcset="img/slider-768-6.jpg">
+            <img class="interior-style__image" src="img/slider-320-6.jpg" alt="">
+          </picture>
         </li>
       </ul>
-      <div class="interion-style__block-text">
-        <h2 class="interion-style__title">Задайте тон своему
-          <span class="interion-style__title-bolt">интерьеру</span>
+      <div class="interior-style__block-text">
+        <h2 class="interior-style__title">Задайте тон своему<br>
+          <span class="interior-style__title-bolt">интерьеру</span>
         </h2>
-        <p class="interion-style__text">238 изотоп урана ферментативно
-          собой полимерный анод</p>
-        <a href="#">
-          <img src="img/design.png" alt="design">
+        <p class="interior-style__text">238 изотоп урана ферментативно<br>собой полимерный анод</p>
+        <div class="interior-style__button-block">
+          <a class="interior-style__button interior-style__button--design-active" href="#">
+          <span class="visually-hidden">design</span>
         </a>
-        <a href="#">
-          <img src="img/shop.png" alt="shop">
-        </a>
+          <a class="interior-style__button interior-style__button--shop" href="#">
+            <span class="visually-hidden">shop</span>
+          </a>
+        </div>
       </div>
     </section>
     <section class="design">
       <h2 class="visually-hidden">Дизайн комнат</h2>
       <section class="bathrooms">
-        <h2 class="bathrooms__title">Дизайн ванных комнат</h2>
-        <p class="bathrooms__text">238 изотоп урана ферментативно собой полимерный анод</p>
+        <div class="bathrooms__block-text">
+          <h2 class="bathrooms__title">Дизайн ванных<br>комнат</h2>
+          <p class="bathrooms__text">238 изотоп урана ферментативно<br>собой полимерный анод</p>
+        </div>
         <div class="bathrooms__block">
+          <picture>
+            <source media="(min-width: $desktop-width)" srcset="img/bathrooms-1920.jpg">
+            <source media="(min-width: $tablet-width)" srcset="img/bathrooms-768.jpg">
+          </picture>
           <img class="bathrooms__img" src="img/bathrooms-320.jpg" alt="bathrooms">
         </div>
         <div class="bathrooms__block-link">
-          <a href="" class="bathrooms__link">
-            <img src="img/eye.svg" alt="eye">
+          <a class="bathrooms__link" href="#">
+            <span class="visually-hidden">button</span>
           </a>
           <p class="bathrooms__text">Посмотреть наши работы</p>
         </div>
       </section>
       <section class="living-rooms">
-        <h2 class="living-rooms__title">Дизайн ванных комнат</h2>
-        <p class="living-rooms__text">238 изотоп урана ферментативно собой полимерный анод</p>
+        <div class="living-rooms__block-text">
+          <h2 class="living-rooms__title">Дизайн<br>гостиных комнат</h2>
+          <p class="living-rooms__text">238 изотоп урана ферментативно<br>собой полимерный анод</p>
+        </div>
         <div class="living-rooms__block">
-          <img class="living-rooms__img" src="img/bathrooms-320.jpg" alt="living-rooms">
+          <img class="living-rooms__img" src="img/living rooms-320.jpg" alt="living-rooms">
         </div>
         <div class="living-rooms__block-link">
-          <a href="" class="living-rooms__link">
-            <img src="img/eye.svg" alt="eye">
+          <a class="living-rooms__link" href="#">
+            <span class="visually-hidden">button</span>
           </a>
           <p class="living-rooms__text">Посмотреть наши работы</p>
         </div>

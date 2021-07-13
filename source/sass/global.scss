@@ -1,0 +1,15 @@
+body {
+  margin: 0;
+  color: var(--gray);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+.visually-hidden {
+  position: fixed;
+  transform: scale(0);
+}
